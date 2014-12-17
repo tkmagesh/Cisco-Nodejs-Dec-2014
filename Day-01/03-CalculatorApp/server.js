@@ -1,11 +1,13 @@
 var http = require("http"),
 	serveStatic = require("./serveStatic.js"),
 	urlParser = require("./urlParser.js"),
+	bodyParser = require("./bodyParser.js"),
 	processCalculate = require("./processCalculate.js"),
 	app = require("./app.js");
 
 app.use(serveStatic);
 app.use(urlParser);
+app.use(bodyParser);
 app.use(processCalculate);
 
 var server = http.createServer(app.run);
