@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task Manager</title>
+</head>
+<body>
+	<h1>Task Manager</h1>
+	<hr>
+	<h3>Task List [<%= list.length %>]</h3>
+	<ol>
+		<% for(var i=0; i<list.length; i++) {%>
+		   <li><%= list[i] %></li>
+		<% } %>
+	</ol>
+</body>
+</html>
