@@ -22,6 +22,19 @@ function f3(next){
    },3000);
 }
 
-var fns = [f1,f2,f3]
-for(var i=0;i<fns.length;i++)
-	fns[i]();
+
+function run(fns){
+   if (arguments.length === 0) return;
+   fns[0](fns[1](fns[2]()));
+   
+}
+
+function run(fns){
+   if (fns.length === 0) return;
+   var fn = fns[0];
+   var remaining = fns.slice(1);
+   var nextFn = function(){
+      run(remaining);
+   };
+   fn(nextFn);
+}
