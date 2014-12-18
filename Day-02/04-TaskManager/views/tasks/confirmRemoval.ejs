@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<h3>Are you sure you want to remove the following items</h3>
+		<ol>
+		<% for(var i=0; i<list.length; i++) {%>
+		   <li><%= list[i].name %></li>
+		<% } %>
+		</ol>
+	<form action="" method="post">
+		<input type="submit" value="Remove"><a href="/tasks">Cancel</a>
+	</form>
+</body>
+</html>

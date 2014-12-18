@@ -18,10 +18,14 @@
 	<h3>Task List [<%= list.length %>]</h3>
 	<ol>
 		<% for(var i=0; i<list.length; i++) {%>
-		   <li><%= list[i] %></li>
+		   <li><span class="<%= list[i].isCompleted ? 'completed' : '' %>">
+		   		<%= list[i].name %>
+		   	   </span> 
+		   	   <span><a href="/tasks/toggle/<%=list[i].id%>"> Toggle </a></span>
+		   	</li>
 		<% } %>
-		<li class="completed">Watch Interstellar <a href="">toggle</a></li>
+		
 	</ol>
-	<a href="">Remove Completed</a>  <a href="/tasks/add">Add New</a>
+	<a href="/tasks/removeCompleted">Remove Completed</a>  <a href="/tasks/add">Add New</a>
 </body>
 </html>
