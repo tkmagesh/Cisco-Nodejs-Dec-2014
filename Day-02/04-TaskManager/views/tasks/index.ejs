@@ -3,6 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Task Manager</title>
+	<style>
+	.completed {
+		color :red;
+		text-decoration: line-through;
+		font-weight: bold;
+		font-style: italic;
+	}
+	</style>
 </head>
 <body>
 	<h1>Task Manager</h1>
@@ -12,6 +20,8 @@
 		<% for(var i=0; i<list.length; i++) {%>
 		   <li><%= list[i] %></li>
 		<% } %>
+		<li class="completed">Watch Interstellar <a href="">toggle</a></li>
 	</ol>
+	<a href="">Remove Completed</a>  <a href="/tasks/add">Add New</a>
 </body>
 </html>

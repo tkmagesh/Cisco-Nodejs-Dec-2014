@@ -15,10 +15,12 @@ router.get('/', function(req, res) {
 });
 
 router.get("/add", function(req,res){
-	console.log(req.query);
-	console.log(req.param("taskName"));
-	/*console.log(taskName);
-	tasks.list.push(taskName);*/
+	res.render("tasks/add");
+});
+
+router.post("/add", function(req,res){
+	var taskName = req.param("taskName");
+	tasks.list.push(taskName);
 	res.redirect("/tasks");
 });
 
