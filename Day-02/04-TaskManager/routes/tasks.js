@@ -44,7 +44,11 @@ router.get("/removeCompleted", function(req,res){
 router.post("/removeCompleted", function(req,res){
 	tasks.list = tasks.list.filter(function(task){ return !task.isCompleted; });
 	res.redirect("/tasks");
-})
+});
+
+router.get("/api/tasks", function(req,res){
+	res.json(tasks);
+});
 
 
 module.exports = router;

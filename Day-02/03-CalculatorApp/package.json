@@ -1,0 +1,15 @@
+{
+  "name": "03-CalculatorApp",
+  "version": "0.1.0",
+  "description": "A sample web application in node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Magesh K",
+  "license": "ISC",
+  "dependencies": {
+    "cookie": "^0.1.2"
+  }
+}

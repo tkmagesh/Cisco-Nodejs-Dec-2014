@@ -22,11 +22,12 @@ function f3(next){
    },3000);
 }
 
-
-function run(fns){
-   if (arguments.length === 0) return;
-   fns[0](fns[1](fns[2]()));
-   
+function f4(next){
+   console.log("beginning f4");
+   setTimeout(function(){
+      console.log("f4 is done")
+      if (typeof next=== "function") next();
+   },3000);
 }
 
 function run(fns){
@@ -38,3 +39,5 @@ function run(fns){
    };
    fn(nextFn);
 }
+
+run([f1,f2,f3,f4]);
